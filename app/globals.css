@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f9fafb;
+  --foreground: #0f172a;
+}
+
+@theme inline {
+  /* Cores */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Fontes */
+  --font-sans: var(--font-livvic-sans);
+  --font-mono: var(--font-geologica-mono);
+}
+
+@utility ctn {
+  @apply relative mx-auto max-w-7xl;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-mono);
+}
