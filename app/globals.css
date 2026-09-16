@@ -16,7 +16,7 @@
 }
 
 @utility ctn {
-  @apply relative mx-auto max-w-7xl;
+  @apply relative mx-auto max-w-7xl px-4;
 }
 
 body {
