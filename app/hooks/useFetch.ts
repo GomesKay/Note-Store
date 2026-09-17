@@ -1,9 +1,9 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useCallback, useEffect, useState } from "react"
 
 import { api } from "../lib/api"
 
 interface UseFetchProps {
+  queryKey?: any[]
   url: string
   params?: object
   delay?: number
@@ -11,13 +11,15 @@ interface UseFetchProps {
   enabled?: boolean
 }
 
-export function useFetch<T>({
-  url,
-  params,
-  delay = 2000,
-  initialData,
-  enabled = true,
-}: UseFetchProps) {
+export function useFetch<T extends object>(config: UseFetchProps) {
+  const [memoConfig, setMemoConfig] = useState(config)
+
+  useEffect(() => {
+    setMemoConfig(config)
+  }, [JSON.stringify(config.queryKey)])
+
+  const { url, params, delay = 2000, initialData, enabled = true } = memoConfig
+
   const [data, setData] = useState<T>(initialData)
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)

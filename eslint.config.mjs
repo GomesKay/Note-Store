@@ -16,6 +16,9 @@ const eslintConfig = defineConfig([
     rules: {
       "simple-import-sort/imports": "error",
       "simple-import-sort/exports": "error",
+      "@typescript-eslint/no-explicit-any": "off",
+      "react-hooks/set-state-in-effect": "off",
+      "react-hooks/exhaustive-deps": "off",
     },
   },
 

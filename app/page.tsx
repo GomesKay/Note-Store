@@ -16,25 +16,35 @@ import {
   TruckIcon,
 } from "@phosphor-icons/react"
 import Image from "next/image"
+import { useState } from "react"
 
 import { Footer } from "./components/Footer"
 import { Header } from "./components/Header"
 import { Button } from "./components/ui/button"
 import { useFetch } from "./hooks/useFetch"
+import { cn } from "./lib/utils"
 import { Notebook } from "./types"
+import { formatCurrency } from "./utils/format-currency"
 
 export default function Home() {
+  const [selectedCategory, setSelectedCategory] = useState("")
   const {
     data: notebooks,
     isLoading,
     error,
     refetch,
   } = useFetch<Notebook[]>({
+    queryKey: [selectedCategory],
     url: "/notebooks",
-    /*params: {
-      category: "gamer",
-    },*/
+    params: selectedCategory ? { category: selectedCategory } : undefined,
   })
+
+  const categories = [
+    { label: "Todos", value: "", icon: LaptopIcon },
+    { label: "Básicos", value: "basicos", icon: BriefcaseIcon },
+    { label: "Gamer", value: "gamer", icon: GameControllerIcon },
+    { label: "Pro", value: "pro", icon: RocketLaunchIcon },
+  ]
 
   return (
     <>
@@ -94,30 +104,23 @@ export default function Home() {
           <div className="ctn flex flex-col gap-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
-                <Button
-                  icon={[LaptopIcon, "left"]}
-                  className="text-background rounded-full bg-[#181d34]"
-                >
-                  Todos
-                </Button>
-                <Button
-                  icon={[BriefcaseIcon, "left"]}
-                  className="rounded-full bg-[#f3f4f6]"
-                >
-                  Básicos
-                </Button>
-                <Button
-                  icon={[GameControllerIcon, "left"]}
-                  className="rounded-full bg-[#f3f4f6]"
-                >
-                  Gamer
-                </Button>
-                <Button
-                  icon={[RocketLaunchIcon, "left"]}
-                  className="rounded-full bg-[#f3f4f6]"
-                >
-                  Pro
-                </Button>
+                {categories.map((cat) => (
+                  <Button
+                    key={cat.label}
+                    type="button"
+                    icon={[cat.icon, "left"]}
+                    disabled={isLoading}
+                    onClick={() => setSelectedCategory(cat.value)}
+                    className={cn(
+                      "disabled:pointer-events-none disabled:opacity-70",
+                      selectedCategory === cat.value
+                        ? "text-background rounded-full bg-[#181d34]"
+                        : "rounded-full bg-[#f3f4f6]",
+                    )}
+                  >
+                    {cat.label}
+                  </Button>
+                ))}
               </div>
               <div className="flex items-center gap-4">
                 <SlidersIcon size={20} />
@@ -176,10 +179,12 @@ export default function Home() {
                       <div>
                         {item.previousPrice && (
                           <p className="text-sm text-slate-400 line-through">
-                            R$ {item.previousPrice}
+                            {formatCurrency(item.previousPrice)}
                           </p>
                         )}
-                        <p className="text-lg font-semibold">R$ {item.price}</p>
+                        <p className="text-lg font-semibold">
+                          {formatCurrency(item.price)}
+                        </p>
                       </div>
 
                       <Button
