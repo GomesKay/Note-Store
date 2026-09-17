@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "server": "json-server --watch db.json --port 3001",
     "lint": "eslint . --fix",
     "prettier": "prettier --write .",
     "commit": "git add . && cz"
@@ -20,7 +21,9 @@
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",
+    "axios": "^1.20.0",
     "clsx": "^2.1.1",
+    "json-server": "^1.0.0-beta.15",
     "next": "16.3.5",
     "react": "19.2.8",
     "react-dom": "19.2.8",

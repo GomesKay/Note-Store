@@ -1,0 +1,113 @@
+{
+  "notebooks": [
+    {
+      "id": 1,
+      "title": "Notebook Acer Aspire 16 A16-71M-55H0 Intel Core Ultra 5 115U 16GB RAM 512GB SSD Windows 11",
+      "image": "/acer_aspire16_i5.jpg",
+      "mark": "Acer",
+      "score": 4.7,
+      "numberOfReviews": 56,
+      "price": 3499,
+      "previousPrice": 4199,
+      "category": "basicos"
+    },
+    {
+      "id": 2,
+      "title": "Notebook Lenovo IdeaPad Slim 3 AMD Ryzen 7 7735HS 16GB 512GB SSD 15.3'' WUXGA Linux",
+      "image": "/lenovo_slim3_ryzen7.jpg",
+      "mark": "Lenovo",
+      "score": 4.7,
+      "numberOfReviews": 32,
+      "price": 3199,
+      "previousPrice": 3999,
+      "category": "basicos"
+    },
+    {
+      "id": 3,
+      "title": "Notebook Asus Vivobook S14 S3407CA-LY113W Intel Core Ultra 5 225H 16GB RAM 512GB SSD Windows 11",
+      "image": "/asus_vivobook14_i5.jpg",
+      "mark": "Asus",
+      "score": 4.8,
+      "numberOfReviews": 23,
+      "price": 4449,
+      "previousPrice": 5199,
+      "category": "basicos"
+    },
+    {
+      "id": 4,
+      "title": "Notebook Lenovo LOQ 15IRX9 I5-13450HX RTX 4050 6GB 16GB RAM 512GB SSD Linux",
+      "image": "/lenovo_loq_i5_4050.jpg",
+      "mark": "Lenovo",
+      "score": 4.6,
+      "numberOfReviews": 45,
+      "price": 4799,
+      "previousPrice": 5299,
+      "category": "gamer"
+    },
+    {
+      "id": 5,
+      "title": "Notebook Acer Nitro V15 ANV15-41-R2GT AMD Ryzen 7 7735HS RTX 4050 16GB RAM 512GB SSD Linux",
+      "image": "/acer_nitrov15_ryzen7_4050.jpg",
+      "mark": "Acer",
+      "score": 4.8,
+      "numberOfReviews": 110,
+      "price": 4499,
+      "previousPrice": 5099,
+      "category": "gamer"
+    },
+    {
+      "id": 6,
+      "title": "Notebook ASUS TUF Gaming F16 FX608JHR RTX 5050 Intel Core i5 14450HX 16GB RAM 512GB SSD Windows 11",
+      "image": "/asus_tuf16_i5_5050.jpg",
+      "mark": "Asus",
+      "score": 4.9,
+      "numberOfReviews": 88,
+      "price": 6799,
+      "previousPrice": 7199,
+      "category": "gamer"
+    },
+    {
+      "id": 7,
+      "title": "Notebook Dell Alienware 16 Aurora Intel Core 5 210H RTX 4050 16GB RAM 512GB SSD Windows 11",
+      "image": "/dell_aurora_i5_4050.jpg",
+      "mark": "Dell",
+      "score": 4.8,
+      "numberOfReviews": 54,
+      "price": 5999,
+      "previousPrice": 6799,
+      "category": "gamer"
+    },
+    {
+      "id": 8,
+      "title": "Notebook gamer Avell STORM 570 Ti",
+      "image": "/avell_storm_570ti.jpg",
+      "mark": "Avell",
+      "score": 4.8,
+      "numberOfReviews": 72,
+      "price": 14599,
+      "previousPrice": 15499,
+      "category": "gamer"
+    },
+    {
+      "id": 9,
+      "title": "Notebook gamer ASUS ROG Strix G16 G615 I9 14900HX RTX 5060",
+      "image": "/asus_rog_i9_5060.jpg",
+      "mark": "Asus",
+      "score": 4.9,
+      "numberOfReviews": 120,
+      "price": 9199,
+      "previousPrice": 10199,
+      "category": "gamer"
+    },
+    {
+      "id": 10,
+      "title": "Notebook Galaxy Book4 Ultra RTX 4050",
+      "image": "/samsung_galaxybook4_ultra.jpg",
+      "mark": "Samsung",
+      "score": 4.9,
+      "numberOfReviews": 15,
+      "price": 14900,
+      "category": "pro"
+    }
+  ]
+}
